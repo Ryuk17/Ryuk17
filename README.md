@@ -4,6 +4,6 @@
 
 - :orange_book: Creazy on speech algorithms
 - :hammer: Depolying algorithms on ARM 
-- 😈: King of ARAM 
+- 😈 King of ARAM 
 - 🐮 🍺
 
