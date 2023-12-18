@@ -4,6 +4,6 @@
 
 - :orange_book: passionate speech algorithm engineer
 - :hammer: work on embedding systems
-- 😈 King of ARAM 
+- 😈 king of ARAM 
 - 🐮 🍺
 
