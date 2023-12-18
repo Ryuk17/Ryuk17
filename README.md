@@ -2,8 +2,8 @@
 
 ### Hi, I am Ryuk 👋
 
-- :orange_book: Creazy on speech algorithms
-- :hammer: Depolying algorithms on ARM 
+- :orange_book: passionate speech algorithm engineer
+- :hammer: work on embedding systems
 - 😈 King of ARAM 
 - 🐮 🍺
 
