@@ -2,8 +2,8 @@
 
 ### Hi, I am Ryuk 👋
 
-- :orange_book: passionate speech algorithm engineer
-- :hammer: work on embedding systems
+- :orange_book: Passionate speech algorithm engineer
+- :hammer: Engaged in embedded systems
 - 😈 king of ARAM 
 - 🐮 🍺
 
