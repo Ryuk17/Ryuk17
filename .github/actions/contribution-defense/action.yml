@@ -1,0 +1,28 @@
+name: "Contribution Defense"
+description: "Your contribution graph collapses into a castle wall and defends your profile — an animated pixel-art siege, updated daily"
+author: "rim95dev"
+
+branding:
+  icon: "shield"
+  color: "green"
+
+inputs:
+  github_token:
+    description: "Token used to read the contribution calendar (the default GITHUB_TOKEN is enough)"
+    required: false
+    default: ${{ github.token }}
+  user:
+    description: "GitHub login to render (defaults to the repository owner)"
+    required: false
+  output_dir:
+    description: "Directory where defense-light.svg and defense-dark.svg are written"
+    required: false
+    default: "dist"
+  state_file:
+    description: "Path of the persistent battle-state file"
+    required: false
+    default: "state.json"
+
+runs:
+  using: "node20"
+  main: "scripts/battle.js"

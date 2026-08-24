@@ -1,0 +1,44 @@
+name: Contribution Defense
+
+on:
+  schedule:
+    - cron: "30 15 * * *" # 00:30 KST — adjust to your timezone
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths-ignore:
+      - "dist/**"
+      - "state.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: defense
+  cancel-in-progress: false
+
+jobs:
+  battle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # vendored from rim95dev/contribution-defense@v1 with two rendering
+      # fixes: settle keyframes are kept monotonic (a brick killed mid-settle
+      # produced out-of-order percentages that browsers re-sort into a slow
+      # drift), and melee shakes get a hold frame (the +2px wind-up used to
+      # interpolate from seconds earlier).
+      - name: Fight tonight's siege
+        uses: ./.github/actions/contribution-defense
+
+      - name: Commit battle result
+        run: |
+          git config user.name "defense-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist state.json
+          if git diff --staged --quiet; then
+            echo "no changes"
+          else
+            git commit -m "battle: $(date -u +%F) [skip ci]"
+            git push
+          fi
