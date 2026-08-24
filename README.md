@@ -6,7 +6,7 @@
 - :hammer: Engaged in embedded systems
 - 😈 king of ARAM 
 - 🐮 🍺
-
+<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="dist/defense-dark.svg">
